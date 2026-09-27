@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0d162b;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+/* App Shell Structure */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  background: #0d162b;
+  position: relative;
+}
+
+.app-main-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-main-content.has-bottom-nav {
+  padding-bottom: 85px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ===========================
+   SCROLLBAR STYLING
+   =========================== */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d162b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9800;
+  border-radius: 4px;
+  border: 2px solid #0d162b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F57C00;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #E65100;
+}
+
+/* Firefox */
+* {
+  scrollbar-color: #FF9800 #0d162b;
+  scrollbar-width: thin;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #FF9800;
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+}
+
+/* Button hover effects */
+button:hover {
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Text selection color */
+::selection {
+  background-color: #FF9800;
+  color: #0d162b;
+}
+
+::-moz-selection {
+  background-color: #FF9800;
+  color: #0d162b;
+}

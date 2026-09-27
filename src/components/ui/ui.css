@@ -1,0 +1,280 @@
+/* Shared design-system component styles */
+
+.ss-screen {
+  min-height: 100%;
+  width: 100%;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  box-sizing: border-box;
+  padding: var(--space-5) var(--screen-padding-x) calc(var(--bottom-nav-height) + var(--space-8));
+}
+
+.ss-screen--no-bottom-pad {
+  padding-bottom: var(--space-8);
+}
+
+.ss-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.ss-header__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.ss-header__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+  margin: 0;
+  font-weight: 600;
+}
+
+.ss-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface-raised);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.ss-back-button:hover {
+  background: var(--color-surface-sunken);
+}
+
+/* Card */
+.ss-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-sizing: border-box;
+}
+
+.ss-card--raised {
+  background: var(--color-surface-raised);
+}
+
+.ss-card--interactive {
+  cursor: pointer;
+  transition: transform var(--transition-base), border-color var(--transition-base), background var(--transition-base);
+}
+
+.ss-card--interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent-border);
+}
+
+.ss-card--interactive:active {
+  transform: translateY(0);
+}
+
+.ss-card--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ss-card--disabled:hover {
+  transform: none;
+  border-color: var(--color-border);
+}
+
+/* Section label */
+.ss-eyebrow {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-3);
+  font-weight: 700;
+}
+
+/* Buttons */
+.ss-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.ss-button:active {
+  transform: scale(0.98);
+}
+
+.ss-button--primary {
+  background: var(--color-accent);
+  color: #1a1200;
+  box-shadow: 0 4px 14px rgba(255, 149, 0, 0.25);
+}
+
+.ss-button--primary:hover {
+  background: var(--color-accent-strong);
+}
+
+.ss-button--secondary {
+  background: var(--color-surface-raised);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-strong);
+}
+
+.ss-button--secondary:hover {
+  background: var(--color-surface-sunken);
+}
+
+.ss-button--danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.ss-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Status badge */
+.ss-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ss-status-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ss-status-badge--not_started {
+  color: var(--color-status-not-started);
+  background: var(--color-status-not-started-soft);
+}
+.ss-status-badge--not_started .ss-status-badge__dot { background: var(--color-status-not-started); }
+
+.ss-status-badge--in_progress {
+  color: var(--color-status-in-progress);
+  background: var(--color-status-in-progress-soft);
+}
+.ss-status-badge--in_progress .ss-status-badge__dot { background: var(--color-status-in-progress); }
+
+.ss-status-badge--completed {
+  color: var(--color-status-completed);
+  background: var(--color-status-completed-soft);
+}
+.ss-status-badge--completed .ss-status-badge__dot { background: var(--color-status-completed); }
+
+.ss-status-badge--passed {
+  color: var(--color-status-passed);
+  background: var(--color-status-passed-soft);
+}
+.ss-status-badge--passed .ss-status-badge__dot { background: var(--color-status-passed); }
+
+.ss-status-badge--failed {
+  color: var(--color-status-failed);
+  background: var(--color-status-failed-soft);
+}
+.ss-status-badge--failed .ss-status-badge__dot { background: var(--color-status-failed); }
+
+.ss-status-badge--locked {
+  color: var(--color-status-locked);
+  background: var(--color-status-locked-soft);
+}
+.ss-status-badge--locked .ss-status-badge__dot { background: var(--color-status-locked); }
+
+/* Progress bar */
+.ss-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.ss-progress-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+/* Loading / empty / error states */
+.ss-state-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-10) var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.ss-state-block__icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.ss-state-block__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.ss-state-block__message {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 280px;
+}
+
+.ss-spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 149, 0, 0.2);
+  border-top-color: var(--color-accent);
+  animation: ss-spin 0.7s linear infinite;
+}
+
+@keyframes ss-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ss-spinner {
+    animation-duration: 1.4s;
+  }
+}

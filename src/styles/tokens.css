@@ -1,0 +1,108 @@
+/*
+ * SIH Safety Trainer — Design Tokens
+ * Single source of truth for color, spacing, radius, and type used across
+ * every screen. Replaces the old per-file inline-style constants
+ * (#0d162b, #16233d, #FF9800, etc. copy-pasted in every component).
+ */
+
+:root {
+  /* ---- Surfaces ---- */
+  --color-bg: #0b1220;
+  --color-surface: #131c30;
+  --color-surface-raised: #182440;
+  --color-surface-sunken: #0d1524;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  /* ---- Text ---- */
+  --color-text-primary: #f3f5f9;
+  --color-text-secondary: #96a3b8;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #0b1220;
+
+  /* ---- Brand / safety accent (industrial safety orange) ---- */
+  --color-accent: #ff9500;
+  --color-accent-strong: #f57c00;
+  --color-accent-soft: rgba(255, 149, 0, 0.14);
+  --color-accent-border: rgba(255, 149, 0, 0.35);
+
+  /* ---- Hazard-specific colors (used for module/drill categories) ---- */
+  --color-hazard-fire: #ef4444;
+  --color-hazard-fire-soft: rgba(239, 68, 68, 0.14);
+  --color-hazard-gas: #0ea5e9;
+  --color-hazard-gas-soft: rgba(14, 165, 233, 0.14);
+  --color-hazard-mechanical: #a855f7;
+  --color-hazard-mechanical-soft: rgba(168, 85, 247, 0.14);
+  --color-hazard-chemical: #14b8a6;
+  --color-hazard-chemical-soft: rgba(20, 184, 166, 0.14);
+  --color-hazard-generic: #94a3b8;
+  --color-hazard-generic-soft: rgba(148, 163, 184, 0.14);
+
+  /* ---- Status colors ---- */
+  --color-status-not-started: #64748b;
+  --color-status-not-started-soft: rgba(100, 116, 139, 0.16);
+  --color-status-in-progress: #ff9500;
+  --color-status-in-progress-soft: rgba(255, 149, 0, 0.16);
+  --color-status-completed: #22c55e;
+  --color-status-completed-soft: rgba(34, 197, 94, 0.16);
+  --color-status-passed: #22c55e;
+  --color-status-passed-soft: rgba(34, 197, 94, 0.16);
+  --color-status-failed: #ef4444;
+  --color-status-failed-soft: rgba(239, 68, 68, 0.16);
+  --color-status-locked: #475569;
+  --color-status-locked-soft: rgba(71, 85, 105, 0.16);
+
+  /* ---- Semantic ---- */
+  --color-danger: #ef4444;
+  --color-danger-soft: rgba(239, 68, 68, 0.12);
+  --color-warning: #f59e0b;
+  --color-warning-soft: rgba(245, 158, 11, 0.12);
+  --color-success: #22c55e;
+  --color-success-soft: rgba(34, 197, 94, 0.12);
+  --color-info: #0ea5e9;
+  --color-info-soft: rgba(14, 165, 233, 0.12);
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12.5px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 17px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+
+  /* ---- Motion (restrained, per redesign brief) ---- */
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+
+  /* ---- Layout ---- */
+  --bottom-nav-height: 64px;
+  --screen-padding-x: 16px;
+}
